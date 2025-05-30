@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdf6f0; 
+  color: #5e4b3c;
+}
+
+header {
+  background: linear-gradient(to right, #e4d1c1, #c9b39c);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #654321; /* Rich brown */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #77635c; 
+  background-color: #f8f0e3; 
+  border: 1px solid #e3d1c1;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  margin: 0 0.5rem;
+  transition: background 0.3s ease, color 0.3s ease; 
+}
+
+nav a:hover {
+  background-color: #e3d1c1; 
+  color: #5e4b3c;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.column {
+  background-color: #fffaf5; 
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.column::before {
+  content: '';
+  display: block;
+  height: 8px;
+  background: linear-gradient(to right, #e4d1c1, #c9b39c); 
+}
+
+.column-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.column-content i {
+  font-size: 2rem;
+  color: #b8860b; 
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.column-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #5e4b3c;
+}
+
+.column-content p {
+  font-size: 0.95rem;
+  color: #7a6654;
+}
+
+footer {
+  background: linear-gradient(to right, #543d34, #6e5146); 
+  color: #f8f0e3; 
+  padding: 1.5rem;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    display: block;
+    margin-top: 1.5rem;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem auto;
+  }
+}
